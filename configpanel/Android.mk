@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017 The MoKee Open Source Project
+#               2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,7 +30,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v7-preference \
     android-support-v7-recyclerview \
-    org.mokee.platform.internal
+    org.cyanogenmod.platform.internal
 
 LOCAL_AAPT_FLAGS := \
     --auto-add-overlay \

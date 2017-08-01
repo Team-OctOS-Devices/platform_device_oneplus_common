@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2017 The MoKee Open Source Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +19,12 @@ package com.cyanogenmod.pocketmode;
 
 import android.content.Context;
 
-import mokee.providers.MKSettings;
+import cyanogenmod.providers.CMSettings;
 
-import org.mokee.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
-import static org.mokee.platform.internal.R.bool.config_proximityCheckOnWake;
-import static org.mokee.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault;
+import static org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake;
+import static org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault;
 
 class Utils {
 
@@ -38,8 +39,8 @@ class Utils {
     }
 
     static boolean isEnabled(Context content) {
-        return MKSettings.System.getInt(content.getContentResolver(),
-                MKSettings.System.PROXIMITY_ON_WAKE,
+        return CMSettings.System.getInt(content.getContentResolver(),
+                CMSettings.System.PROXIMITY_ON_WAKE,
                 isEnabledByDefault(content) ? 1 : 0) != 0;
     }
 

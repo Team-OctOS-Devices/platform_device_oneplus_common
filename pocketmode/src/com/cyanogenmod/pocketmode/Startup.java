@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2017 The MoKee Open Source Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,14 +23,14 @@ import android.content.Intent;
 import android.os.UserHandle;
 import android.util.Log;
 
-import static mokee.content.Intent.ACTION_INITIALIZE_MK_HARDWARE;
+import static cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE;
 
 public class Startup extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-        if (ACTION_INITIALIZE_MK_HARDWARE.equals(action)) {
+        if (ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
             if (Utils.isSupported(context)) {
                 context.startServiceAsUser(
                         new Intent(context, PocketModeService.class),

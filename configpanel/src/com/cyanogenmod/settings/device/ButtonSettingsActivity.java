@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 The MoKee Open Source Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +22,7 @@ import android.os.Bundle;
 
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 
-import org.mokee.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 public class ButtonSettingsActivity extends SettingsDrawerActivity {
 
