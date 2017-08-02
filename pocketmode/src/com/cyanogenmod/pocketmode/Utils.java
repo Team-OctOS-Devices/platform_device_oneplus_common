@@ -34,26 +34,21 @@ class Utils {
                 FileUtils.isFileWritable(Constants.FP_DISABLE_NODE);
     }
 
-    private static boolean isEnabledByDefault(Context context) {
+    static boolean isEnabledByDefault(Context context) {
         return context.getResources().getBoolean(
                 config_proximityCheckOnWakeEnabledByDefault);
     }
 
-    private static boolean isProximityCheckEnabled(Context context) {
+    static boolean isProximityCheckEnabled(Context context) {
         return CMSettings.System.getInt(context.getContentResolver(),
                 CMSettings.System.PROXIMITY_ON_WAKE,
                 isEnabledByDefault(context) ? 1 : 0) != 0;
     }
 
-    private static boolean isFingerprintEnabled(Context context) {
+    static boolean isFingerprintEnabled(Context context) {
         final FingerprintManager fm = (FingerprintManager) context
                 .getSystemService(Context.FINGERPRINT_SERVICE);
         return fm.hasEnrolledFingerprints();
-    }
-
-    static boolean isEnabled(Context context) {
-        return isProximityCheckEnabled(context) &&
-                isFingerprintEnabled(context);
     }
 
 }
